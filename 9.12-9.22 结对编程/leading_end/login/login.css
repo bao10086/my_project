@@ -1,0 +1,194 @@
+* {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    /* margin属性为给定元素设置所有四个（上下左右）方向的外边距属性。 */
+    background-color: #ecf0f3;
+    display: flex;
+
+    /* 弹性盒子布局 */
+    align-items: center;
+    /* 交叉轴的中点对齐 */
+    text-align: center;
+    /* 文字居中 */
+    place-items: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 350px;
+    height: 520px;
+
+    padding: 40px;
+    /*padding属性设置一个元素的内边距，padding 区域指一个元素的内容和其边界之间的空间，该属性不能为负值。padding简写属性可以避免分别设置每个边的内边距*/
+
+    /* 圆角 */
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    position: absolute;
+
+    /* 居中显示 */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 图片 */
+.icon {
+    height: 100px;
+    width: 100px;
+
+    border-radius: 35%;
+}
+
+/* 放图片的框 */
+.logo {
+    height: 100px;
+    width: 100px;
+
+    background-size: 160px;
+    background-position: -30px;
+
+    margin: auto;
+    border-radius: 35%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+.sign_in_box,
+.sign_up_box,
+.forget_password_box {
+    margin-top: 20px;
+}
+
+.set_userinfo_box {
+    margin-top: 15px;
+}
+
+.title {
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 1.0rem;
+
+    color: #2b385b;
+    letter-spacing: 3px;
+    /* 字间间隔 */
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 20px;
+    color: #2b385b;
+}
+
+.inputs#special {
+    margin-top: 15px;
+}
+
+input {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+
+    display: block;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    padding: 10px 10px 10px 20px;
+
+    font-size: 14px;
+    border-radius: 20px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+.text_button {
+    position: absolute;
+    right: 12px;
+    margin-top: -35px;
+    margin-right: 65px;
+    font-size: 14px;
+    color: #808080;
+}
+
+.text_button:active {
+    color: black;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+label.special {
+    margin-top: 10px;
+}
+
+button {
+    display: block;
+    width: 50%;
+    padding: 0;
+    border: none;
+    outline: none;
+    margin: auto;
+    /* 居中显示 */
+    box-sizing: border-box;
+    margin-top: 40px;
+    background: #a0aac3;
+    height: 50px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    /* 字体间隔 */
+
+    box-shadow: 6px 6px 10px #cbced1, -6px -6px 10px white;
+}
+
+button.special {
+    margin-top: 25px;
+}
+
+/* 按钮按下 */
+button:active {
+    box-shadow: none;
+}
+
+.jump {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2b385b;
+}
+
+.jump:active {
+    color: black;
+}
+
+/* 显示表单类 */
+.block {
+    display: block;
+}
+
+/* 隐藏表单类 */
+.none {
+    display: none;
+}

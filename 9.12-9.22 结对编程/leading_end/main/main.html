@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="navbar">
+            <div class="user">
+                <img id="icon" src="../icon/icon.jpg" alt="">
+
+                <span id="username">用户名</span>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <span class="fold">菜单</span>
+                <ul>
+                    <li>
+                        <div class="menu_set" onclick="show_user()">
+                            <i class="fa-regular fa-user"></i>
+
+                            <a class="userinfo">用户信息</a>
+                            <!-- 展开 -->
+                            <span id="unfold_user" style="margin-left: 30px;">﹀</span>
+                        </div>
+                        <div id="show_user" style="display:none;" class="password">
+                            <a href="#" id="change_password">更改密码</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-power-off"></i>
+                        <a href="#" id="out">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主要区域 -->
+        <div class="main">
+            <!-- 头部栏 -->
+            <div class="head">
+                <div class="name">
+                    <h1 id="title">小初高数学学习软件</h1>
+                    <h3 id="author">by 邵聪 曾佳宝</h3>
+                </div>
+                <!-- <div class="progress-bar">
+                    做题进度
+                </div> -->
+
+            </div>
+
+            <div class="question">
+
+                <!-- ---选择难度 题目数--- -->
+                <div class="select">
+                    <h1 class="title">
+                        生成试卷...
+                    </h1>
+                    <div>
+                        难度：
+                        <select id="education">
+                            <option value="小学">小学</option>
+                            <option value="初中">初中</option>
+                            <option value="高中">高中</option>
+                        </select>
+                    </div>
+                    <div>
+                        数目：<input type="text" id="problem_num" onkeyup="value=value.replace(/[^(\d)]/g,'')">
+                    </div>
+                    <div><button onclick="get_problem()">确定</button></div>
+                </div>
+
+                <!-- 更改密码 -->
+                <div class="change_password none">
+                    <div class="title">更改密码</div>
+
+                    <div class="inputs">
+                        <label for="password">原密码</label><input id="password" type="password" placeholder="请输入原密码">
+                        <br>
+                        <label for="password1">新密码</label><input id="password1" type="password"
+                            placeholder="请输入密码 (6-10位，必须含大小写字母和数字)">
+                        <br>
+                        <label for="password2">确认密码</label><input id="password2" type="password" placeholder="请再次输入密码">
+                        <br>
+                        <button type="submit" onclick="cancel()">取消</button>
+                        <button type="submit" onclick="confirm()">确认</button>
+                    </div>
+                </div>
+
+                <div class="question-box present none" id="1">
+                    <div class="number">
+                        第<span>1</span>题
+                    </div>
+                    <div class="exercise">
+                        <span>012345678901234567890123456789</span>
+                    </div>
+                    <div class="option" id="present">
+                        <label><input type="radio" name="present" value="0"><span>A:1</span></label>
+                        <label><input type="radio" name="present" value="1"><span>B:2</span></label>
+                        <label><input type="radio" name="present" value="2"><span>C:3</span></label>
+                        <label><input type="radio" name="present" value="3"><span>D:4</span></label>
+                    </div>
+                </div>
+
+                <div class="question-box right none">
+                    <div class="number">
+                        第<span>2</span>题
+                    </div>
+                    <div class="exercise">
+                        <span>012345678901234567890123456789</span>
+                    </div>
+                    <div class="option">
+                        <label><input type="radio" name="right" value="0"><span>A:1</span></label>
+                        <label><input type="radio" name="right" value="1"><span>B:2</span></label>
+                        <label><input type="radio" name="right" value="2"><span>C:3</span></label>
+                        <label><input type="radio" name="right" value="3"><span>D:4</span></label>
+                    </div>
+                </div>
+
+                <button class="before none" type="submit" onclick="before()">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="next none" type="submit" onclick="next()">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

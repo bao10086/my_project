@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- ---显示分数--- -->
+        <div class="interview_score">
+            <div class="circle_progress_wrapper">
+                <span class="correct_rate">正确率</span>
+                <div class="correct_score">
+                    <span id="correct_score_num">00</span>
+                    <span style="font-size: 25px;">%</span>
+                </div>
+                <div class="wrapper left">
+                    <div class="circle_progress left_circle"></div>
+                </div>
+                <div class="wrapper right">
+                    <div class="circle_progress right_circle"></div>
+                </div>
+            </div>
+            <div class="flag_scores" id="flag">
+                加油哦~
+            </div>
+        </div>
+
+        <!-- ---退出--- -->
+        <button type="submit" name="back" onclick="back()">退出</button>
+        <!-- ---继续做题--- -->
+        <button type="submit" name="keep" onclick="keep()">继续做题</button>
+    </div>
+      <script src="result.js"></script>
+</body>
+
+</html>

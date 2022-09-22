@@ -1,0 +1,410 @@
+* {
+    /* 去除所有边距 */
+    margin: 0;
+    padding: 0;
+    /* 去掉连接下划线 */
+    text-decoration: none;
+    /* 文字自动换行 */
+    /* word-break: break-all; */
+}
+
+body {
+    background-color: #ecf0f3;
+}
+
+.container {
+    display: flex;
+    width: 1100px;
+    height: 690px;
+    padding: 10px;
+    /* 在container外的部分不显示 */
+    overflow: hidden;
+    /* 圆角 */
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    position: absolute;
+    /* 居中显示 */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.navbar {
+    flex: 15%;
+    padding: 30px;
+    height: 90%;
+    margin-right: 20px;
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 50px white;
+
+    border-radius: 20px;
+}
+
+#icon {
+    width: 80px;
+    border-radius: 20px;
+    /* 将icon转为块级元素 */
+    display: block;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+
+}
+
+#username {
+    /* 将icon转为块级元素 */
+    display: block;
+    padding-top: 20px;
+}
+
+.menu {
+    padding-top: 40px;
+    /* 超出边界的不显示 */
+    overflow: hidden;
+}
+
+.menu ul ul {
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.menu li {
+    padding-top: 20px;
+}
+
+/* 导航栏字体颜色 */
+.menu {
+    color: #3a528d;
+}
+
+a {
+    color: #3a528d;
+}
+
+a:active {
+    color: black;
+    font-weight: 550;
+}
+
+.main {
+    flex: 85%;
+}
+
+.head {
+    height: 12%;
+    padding: 20px;
+    background: url('../icon/background1.jpg');
+    background-attachment:fixed;
+    background-size:100% 100%; 
+    background-repeat:no-repeat;
+    /* 阴影 */
+    box-shadow: 7px 7px 20px #cbced1, -14px -14px 100px white;
+    border-radius: 20px;
+
+}
+
+.question {
+    position: relative;
+    height: 76%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.question-box {
+    z-index: 2;
+    width: 380px;
+    height: 480px;
+    padding: 20px;
+    /* 居中 */
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    border-radius: 20px;
+    /* 文字居中 */
+    text-align: center;
+    transition: all .3s;
+}
+.question-box input{
+    display: none;
+}
+.left {
+    left: 2%;
+}
+.right {
+    left: 98%;
+}
+.left,
+.right {
+    z-index: 1;
+    top: 80px;
+    width: 320px;
+    height: 410px;
+    filter: opacity(0.5);
+}
+
+.number {
+    width: 140px;
+    height: 40px;
+    margin: 0 auto;
+    /* 文字居中 */
+    line-height: 40px;
+    /* 阴影 */
+    /* box-shadow: 10px 10px 10px #cbced1, -10px -10px 10px white; */
+    /* border-radius: 10px; */
+    /* 文字 */
+    font-size: 20px;
+}
+
+.right .number,
+.left .number {
+    width: 140px;
+    height: 25px;
+    margin: 0 auto;
+    /* 文字居中 */
+    line-height: 25px;
+    /* 阴影 */
+    /* box-shadow: 10px 10px 10px #cbced1, -10px -10px 10px white; */
+    border-radius: 10px;
+    /* 文字 */
+    font-size: 15px;
+}
+
+.exercise {
+    width: 320px;
+    height: 80px;
+    margin: 30px auto;
+    margin-bottom: 45px;
+    /* 文字上下居中 */
+    line-height: 80px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+    border-radius: 10px;
+}
+.left .exercise,
+.right .exercise {
+    width: 320px;
+    height: 70px;
+    margin: 30px auto;
+    /* 文字上下居中 */
+    line-height: 70px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+    border-radius: 10px;
+}
+
+.option label {
+    display: block;
+    width: 300px;
+    height: 45px;
+    margin: 30px auto;
+    /* 文字上下居中 */
+    line-height: 45px;
+
+    background: #ecf0f3;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px #cbced1, -6px -6px 10px white;
+}
+.present .option label:hover {
+    width: 300px;
+    height: 45px;
+    background: #b9c4d8;
+}
+.right .option label,
+.left .option label {
+    height: 40px;
+    /* 文字上下居中 */
+    line-height: 40px;
+    /* 禁止点击 */
+    pointer-events:none;
+}
+
+button {
+    z-index: 3;
+    position: relative;
+    width: 45px;
+    height: 80px;
+    /* 无边框 */
+    border: none;
+    background: #b9c4d8;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px #cbced1, -6px -6px 10px white;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+.before {
+    position: absolute;
+    left: 20%;
+    top: 320px;
+}
+
+.next {
+    position: absolute;
+    left: 75%;
+    top: 320px;
+}
+
+.select {
+    width: 750px;
+    height: 490px;
+    padding: 20px;
+    /* 居中 */
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    border-radius: 20px;
+    /* 文字居中 */
+    text-align: center;
+}
+.select input {
+    margin: 30px;
+    width: 70%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    padding: 10px 10px 10px 20px;
+
+    font-size: 14px;
+    border-radius: 20px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+}
+.select select {
+    margin: 30px;
+
+    width: 70%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    padding: 10px 10px 10px 20px;
+
+    font-size: 14px;
+    border-radius: 20px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+}
+.select button {
+    margin-top: 20px;
+    width:100px;
+    height: 50px;
+}
+
+
+.title {
+    width: 540px;
+    height: 40px;
+    margin: 45px auto;
+    margin-bottom: 20px;
+    /* 文字居中 */
+    line-height: 40px;
+    /* 阴影 */
+    /* box-shadow: 10px 10px 10px #cbced1, -10px -10px 10px white; */
+    /* border-radius: 10px; */
+    /* 文字 */
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.change_password {
+    z-index: 4;
+    width: 750px;
+    height: 500px;
+    padding: 20px;
+    /* 居中 */
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    border-radius: 20px;
+    /* 文字居中 */
+    text-align: center;
+}
+.change_password .title {
+    width: 540px;
+    height: 40px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    /* 文字居中 */
+    line-height: 40px;
+    /* 阴影 */
+    /* box-shadow: 10px 10px 10px #cbced1, -10px -10px 10px white; */
+    /* border-radius: 10px; */
+    /* 文字 */
+    font-size: 20px;
+}
+
+.change_password input {
+    margin: 30px;
+    width: 60%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    padding: 10px 10px 10px 20px;
+
+    font-size: 14px;
+    border-radius: 20px;
+
+    box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px white;
+}
+.change_password button {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#title {
+    margin-top: 6px;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#author {
+    margin-top: 20px;
+    position: absolute;
+    left: 80%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+    pointer-events: none;
+}
+
+#show_user {
+    padding-top: 20px;
+    padding-left: 20px;
+    color: black;
+}

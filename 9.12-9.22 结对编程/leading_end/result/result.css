@@ -1,0 +1,146 @@
+body {
+    background-color: #ecf0f3;
+}
+
+.container {
+    width: 350px;
+    height: 520px;
+
+    padding: 40px;
+    /*padding属性设置一个元素的内边距，padding 区域指一个元素的内容和其边界之间的空间，该属性不能为负值。padding简写属性可以避免分别设置每个边的内边距*/
+
+    /* 圆角 */
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    position: absolute;
+
+    /* 居中显示 */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 分数条 */
+.interview_score {
+    padding-top: 40px;
+}
+
+.circle_progress_wrapper {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    border: 1px solid rgb(160,170,195);
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.correct_rate {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #2b385b;
+}
+
+.correct_score {
+    position: absolute;
+    width: 180px;
+    top: 70px;
+    left: 70%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #2b385b;
+}
+  
+.wrapper {
+    width: 90px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+.right {
+    right: 0;
+ }
+
+.left {
+    left: 0;
+}
+  
+.circle_progress {
+    width: 170px;
+    height: 170px;
+    box-sizing: content-box;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transform: rotate(-135deg);
+}
+  
+.right_circle {
+    transition: transform 1s;
+    transition-delay: 1s;
+    border-top: 5px solid rgb(160,170,195);
+    border-right: 5px solid rgb(160,170,195);
+    right: 0;
+}
+
+.left_circle {
+    transition: transform 1s;
+    border-bottom: 5px solid rgb(160,170,195);
+    border-left: 5px solid rgb(160,170,195);
+    left: 0;
+}
+
+.flag_scores {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    /* 圆角 */
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    /* 阴影 */
+    box-shadow: 5px 5px 20px #cbced1;
+    line-height: 40px;
+    text-align: center;
+    left: 50%;
+    margin-left: -67px;
+    margin-top: -34px;
+    color: #2b385b;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ---按钮--- */
+button {
+    display: block;
+    width: 50%;
+    padding: 0;
+    border: none;
+    outline: none;
+    margin: auto;
+    /* 居中显示 */
+    box-sizing: border-box;
+    margin-top: 50px;
+    background: #a0aac3;
+    height: 50px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    /* 字体间隔 */
+
+    box-shadow: 6px 6px 10px #cbced1, -6px -6px 10px white;
+}
+
